@@ -1,0 +1,214 @@
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family: rubik;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 96%;
+    align-items: center;
+    /* background-color: red; */
+}
+.left{
+    color: #746553;
+    justify-content: center;
+    align-items: center
+    ;
+    gap: 7px
+    ;
+    font-size: 20px;
+    display: flex;
+}
+.left span{
+    font-size: 40px;
+    font-weight: 700;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.middle button{
+    /* display: block; */
+    height: 55px;
+    border-radius: 15px;
+    border: none;
+    width: 120px;
+    color: #978977;
+    background-color: #E9E8DA;
+    font-weight: 600;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 2px;
+    padding-top: 13px;
+}
+.middle button p{
+    font-size: 20px;
+}
+
+.game-container {
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+    width: max-content;
+    background-color: #9B8B7E; 
+}
+.right{
+    gap: 15px;
+    display: block !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right a {
+    color: #746553;
+    font-size: 15px;
+    text-decoration: none;
+}
+.right button{
+    height: 45px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+    color: #978977;
+    background-color: #E9E8DA;
+    font-weight: 600;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+
+}
+/* Basic styles for the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: repeat(4, 90px);
+    gap: 10px;
+    margin: 20px auto;
+}
+.over .grid-container{
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    grid-template-rows: repeat(4, 60px);
+}
+
+.grid-cell {
+    width: 90px;
+    height: 90px;
+    background-color: #EEE4DA; /* Default background color */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+font-weight: 600;
+    color: #776E65; /* Color for tile numbers */
+}
+.over .grid-cell{
+    row-gap: 5px;
+    column-gap: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+h1{
+    display: none;
+}
+h1.over{
+    display: block;
+}
+/* Styles for different tile values */
+.tile-2 { background-color: #EEE4DA; }
+.tile-4 { background-color: #EDE0C8; }
+.tile-8 { background-color: #F2B179; }
+.tile-16 { background-color: #F59563; }
+.tile-32 { background-color: #F67C5F; }
+.tile-64 { background-color: #F67C5F; }
+.tile-128 { background-color: #EDCF72; }
+.tile-256 { background-color: #EDCC61; }
+.tile-512 { background-color: #EDC850; }
+.tile-1024 { background-color: #EDC53F; }
+.tile-2048 { background-color: #EDC22E; }
+
+/* Optional styles for empty cells */
+.grid-cell.empty {
+    background-color: #BDAC97; /* Make empty cells transparent */
+}
+
+
+.instructions {
+    margin-top: 15px;
+}
+.right br{
+    display: none;
+}
+@media (max-width:590px) {
+    .right a {
+        display: none;
+    }
+    button{
+        width: 120px !important;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+ .grid-container{
+        grid-template-columns: repeat(4, 70px);
+        gap: 10px;
+        grid-template-rows: repeat(4, 70px);
+    }
+    .grid-cell{
+        height: 70px;
+        width: 70px;
+    }
+    .main{
+        margin-top: 20px;
+    }
+    .nav{
+        flex-wrap: wrap;
+    }
+    /* .middle{
+margin-top: 100px;
+    } */
+}
+@media (max-width:434px) {
+    .left span{
+        margin-left: 180px;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    button{
+        width: 190px !important;
+    }
+    .middle button p {
+        margin-bottom: 21px  ;
+    }
+    .middle button{display: flex; padding: 0 !important; justify-content: center; align-items: center; text-align: center;  gap: 5px;}
+    .game-container{margin-top: 100px;}
+}
+@media (max-width:370px) {
+    
+}

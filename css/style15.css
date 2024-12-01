@@ -1,0 +1,264 @@
+.start img{
+  height: 140px;
+  width: auto;
+}
+body{
+  display: flex;
+justify-content: center;
+align-items: center;
+font-family: poppins;
+margin: 0;
+padding: 0;
+}
+.start{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  align-items: center;
+  flex-direction: column;
+}
+.start button, .retry {
+  height: 35px;
+  background-color: #00C148;
+  border: none;
+  color: white;
+  cursor: pointer ;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-top: 20px;
+  width: 140px;
+  outline: none; /* Remove default outline */
+  position: relative; /* Enable positioning for pseudo-elements */
+}
+.hidden{
+  display: none !important;
+}
+
+.start button::after , .retry::after {
+  content: ''; /* Create a pseudo-element for the outline */
+  position: absolute;
+  top: 0; /* Align with the button */
+  left: 0; /* Align with the button */
+  right: 0; /* Stretch to the right */
+  bottom: 0; /* Stretch to the bottom */
+  border-right: 5px solid #00AF28; /* Outline on the right */
+  border-bottom: 5 solid #00AF28; /* Outline on the bottom */
+  border-top: none; /* No top border */
+  border-left: none; /* No left border */ /* Prevent interfering with button clicks */
+  border-radius: 3px; /* Match the button's border-radius */
+}
+.score-paragraph{
+  margin-top: 60px;
+  font-size: 14px;
+}
+.made-by{
+  font-size: 10px;
+  margin-top: 40px;
+}
+.main{
+  display: flex;
+  width:60%;
+  background-color: #C9E3C4;
+  padding: 20px 70px;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.logo{
+  height: 60px
+  ;
+  width: auto;
+}
+.icon{
+  width:20px;
+  height: 20px;
+  margin-top: 10px;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.timer,.question-number{
+  height: 30px;
+  width:60px;
+  background-color: #26BC4F;
+  border-radius: 3px;
+  align-self: flex-end;
+  font-size: 17px;
+  text-align: center;
+  padding-top: 3px;
+  color: white;
+  box-sizing:border-box ;
+}
+.question-number{
+  background-color: #FBC64F;
+  color: black;
+}
+.question{
+  height: 80px;
+padding-left: 5px;
+align-items: center;
+display: flex;
+padding-left: 15px;
+box-sizing: border-box;
+  border-radius: 5px;
+  font-weight: 500;
+  width: 100%;
+  background-color: #E9F0E8;
+}
+.options{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #E9F0E8;
+  border-radius: 10px;
+align-items: center;
+  padding: 15px 0;
+}
+.first , .second , .third , .fourth{
+  width: calc(100%  - 80px);
+  border: 1.5px solid #D9D9D9;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+body{
+  box-sizing: border-box;
+}
+a{
+  font-size: 14px;
+  text-decoration: none;
+  align-self: flex-end;
+  font-weight: 500;
+  color: #01AB08;
+  display: inline;
+}
+.main .made-by{
+  align-self: center;
+  margin-top: -10px;
+}
+/* .nested{
+  height: 15px;
+  width: 15px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 50%;
+} */
+ .correct{
+  border:2px solid #00AF28 ;
+ }
+
+ .correct .nested::after {
+  content: '';
+  display: inline-block; /* Allows the pseudo-element to take up space */
+  width: 20px; /* Set width of the image */
+  height: 20px; /* Set height of the image */
+  background-image: url('correct.png');
+  background-size: cover; /* Ensures the image covers the element's size */
+  background-repeat: no-repeat; /* Prevents tiling */
+  margin-left: 10px; /* Optional: Adds spacing between content and the image */
+}
+
+.wrong .nested::after {
+  content: '';
+  display: inline-block; /* Allows the pseudo-element to take up space */
+  width: 20px; /* Set width of the image */
+  height: 20px; /* Set height of the image */
+  background-image: url('wrong.png');
+  background-size: cover; /* Ensures the image covers the element's size */
+  background-repeat: no-repeat; /* Prevents tiling */
+  margin-left: 10px; /* Optional: Adds spacing between content and the image */
+}
+.icon{
+  cursor: pointer;
+}
+.flex{
+  display: flex !important;
+}
+.result img{
+  height: 100px;
+  margin-top: 40px;
+  width: auto;
+}
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+}
+.result h1{
+  margin-top: -10px;
+  font-weight: 600;
+}
+.result-bar{
+  width: 40vw;
+  height: 70px;
+  border-radius: 5px;
+  margin-top: 50px;
+  display: flex;
+}
+.correct-bar{
+  width: 50%;
+  background-color: #35BD3A;
+  border-radius: 10px 0 0 10px;
+}
+.wrong-bar{
+  flex-grow: 1;
+  border-radius:0 10px 10px 0;
+  background-color: #FF7A7A;
+}
+.wrong{
+  border:2px solid red;
+}
+.text{
+  display: flex;
+  justify-content: space-between;
+  width:50vw;
+margin-top: -40px;
+  align-items: center;
+}
+.text1, .text2{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+  flex-direction: column;
+}
+.text2 span{
+margin-right: -80px;
+}
+.text1 span{
+  margin-left: -50px;
+}
+.text2{
+  margin-top: -5px;
+}
+.retry{
+  margin-top: -1px;
+}
+.attempted{
+  margin-top: -30px;
+}
+@media screen and (max-width: 450px) {
+  .text{
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .question{
+    line-height: 16px;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .first , .second , .third , .fourth{
+    line-height: 16px;
+    font-size: 14px;
+  }
+}

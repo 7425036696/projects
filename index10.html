@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Canvas</title>
+    <link rel="stylesheet" href="/css/style10.css">
+    <script src="/js/script8.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/akar-icons-fonts/src/css/akar-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="menu">
+    <span>
+        <svg>
+        <g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path id="top-line" d="M10,10 L50,10 Z"></path>
+            <path id="middle-line" d="M10,20 L50,20 Z"></path>
+            <path id="bottom-line" d="M10,30 L50,30 Z"></path>
+        </g>
+    </svg>
+</span>
+    <div class="nav">
+<ul>
+    <li><a href="#"><i class="ai-person"></i> My Account</a></li>
+    <li><a href="#"><i class="ai-bell"></i> My Notifications</a></li>
+    <li><a href="#"><i class="ai-chat-question"></i> My Support Requests</a></li>
+    <li>
+        <details>
+            <summary>
+                <i class="ai-airplay-audio"></i>
+                What are you looking for?
+                <i class="ai-chevron-vertical" style="font-size:smaller"></i>
+            </summary>
+
+            <p class="Navbar-meta">Tell us what you are looking for, so we can tailor the website to your needs.</p>
+            <p>
+                <select id="personaSelector" class="Navbar-persona-selector">
+                    <option value="1">I need help with JavaScript</option>
+                    <option value="2">I need help with PHP</option>
+                    <option value="3">I need help with MySQL</option>
+                    <option value="4">I need something else</option>
+                </select>
+            </p>
+        </details>
+    </li>
+</ul>
+    </div>
+</div>
+</body>
+</html>

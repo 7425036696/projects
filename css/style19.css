@@ -1,0 +1,143 @@
+/* General Reset */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures proper centering */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 400px; /* Limits maximum width for larger screens */
+    margin: 20px auto; /* Adjusts for small screens */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Headings */
+h1 {
+    color: #343a40;
+    font-size: 1.8rem; /* Relative size for better scaling */
+    margin-bottom: 20px;
+}
+
+/* Password Display */
+.password-display {
+    border: 2px dashed #28a745;
+    padding: 15px;
+    font-size: 1.2rem; /* Scales with viewport */
+    color: #495057;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    word-break: break-word; /* Prevents overflow for long passwords */
+}
+
+/* Buttons */
+button {
+    width: calc(50% - 10px); /* Responsive width for side-by-side buttons */
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Adjusts button font size */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#copy-password {
+    background-color: #007bff; /* Blue color for copy button */
+}
+
+#copy-password:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem; /* Slightly smaller for responsive design */
+    color: #495057;
+}
+
+/* Inputs */
+input[type='number'] {
+    width: 100%; /* Full width with padding */
+    max-width: 360px; /* Limit maximum width */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 1rem; /* Font scaling */
+    box-sizing: border-box;
+}
+
+/* Options Section */
+.options {
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .password-display {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    input[type='number'] {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+        margin: 10px auto; /* Smaller margin for compact layout */
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .password-display {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* Full-width buttons for smaller screens */
+        margin-bottom: 10px; /* Spacing between stacked buttons */
+    }
+
+    #copy-password {
+        margin-bottom: 0; /* Adjusts for last button */
+    }
+
+    input[type='number'] {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}

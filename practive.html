@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Candy Crush Clone</title>
+    <style>
+        .grid {
+    height: 560px;
+    min-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    background-color: rgba(109, 127, 151, 0.5);
+    border-radius: 10px;
+}
+
+.grid div {
+    height: 70px;
+    width: 70px;
+}
+    </style>   
+  </head>
+  <body>
+    <div class="score-board">
+      <h3>Score</h3>
+      <h1 id="score"></h1>
+    </div>
+    <div class="grid"></div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector(".grid");
+    const scoreDisplay = document.getElementById("score");
+    const width = 8;
+    const squares = [];
+    let score = 0;
+
+    const candyColors = [
+        "url('red-candy.png')",
+        "url('blue-candy.png')",
+        "url('green-candy.png')",
+        "url('yellow-candy.png')",
+        "url('orange-candy.png')",
+        "url('purple-candy.png')",
+    ];
+
+    function createBoard() {
+        for (let i = 0; i < width * width; i++) {
+            const square = document.createElement("div");
+            square.setAttribute("draggable", true);
+            let randomColor = Math.floor(Math.random() * candyColors.length);
+            square.style.backgroundImage = candyColors[randomColor];
+            grid.appendChild(square);
+            squares.push(square);
+        }
+    }
+    createBoard();
+});
+  </script>
+</html>

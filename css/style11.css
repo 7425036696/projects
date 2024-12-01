@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: #604921;
+    margin-top: 20px;
+    font-size: 1.5rem; /* Relative size */
+    text-align: center;
+}
+
+.para {
+    color: #858585;
+    margin-top: 20px;
+    font-size: 0.875rem; /* Relative size */
+    text-align: center;
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Containers */
+.outer {
+    background: #E8F3E3;
+    height: 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.main {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 15px; /* Reduced padding for smaller screens */
+    margin-top: 20px;
+    border-radius: 15px 0px 0px 0px;
+    background-color: #fff; /* Assuming a background color for the main container */
+}
+
+/* Input Fields */
+.input {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    padding-left: 15px;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    display: flex;
+    border: 0.1px solid #D9D9D9;
+    background-color: #fff;
+}
+
+.input input {
+    border: none;
+    outline: none;
+    width: 93%;
+    height: 100%;
+    font-weight: 500;
+    font-size: 0.875rem; /* Relative size */
+}
+
+::placeholder {
+    color: #D9D9D9;
+}
+
+/* Inner Bar */
+.inner {
+    background-color: #33A624;
+    visibility: hidden;
+    height: 100%;
+    border-radius: 25px;
+    font-size: 0.75rem; /* Adjusted font size for responsiveness */
+    padding-top: 1px;
+}
+
+.inner span {
+    color: white;
+    margin-left: 16px;
+    visibility: hidden;
+}
+
+/* Circle */
+.circle {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 20px;
+    border: 1px solid #61481C4D;
+    border-radius: 50%;
+}
+
+.circle img {
+    visibility: hidden;
+}
+
+.done .circle {
+    border-color: #33A624;
+    background-color: #33A624;
+}
+
+.done .circle img {
+    visibility: visible;
+}
+
+.hidden {
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: left;
+    visibility: hidden;
+    color: #FF5151;
+}
+
+.done input {
+    text-decoration: line-through;
+    color: #33A624;
+}
+
+/* Texts */
+.thought {
+    font-size: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.last {
+    text-align: center;
+    font-size: 0.625rem; /* Smaller size for footer text */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .para {
+        font-size: 0.8rem;
+    }
+
+    .input {
+        max-width: 90%; /* Adjust input width */
+        height: 45px; /* Slightly smaller height */
+    }
+
+    .outer {
+        max-width: 90%; /* Adjust bar width */
+    }
+
+    .main {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 454px) {
+    .outer, .input {
+        max-width: 100%;
+        width: auto; /* Full-width for small screens */
+    }
+
+    h1 {
+        font-size: 1rem; /* Further reduction for smaller screens */
+    }
+
+    .para {
+        font-size: 0.75rem;
+    }
+
+    .circle {
+        width: 18px;
+        height: 18px;
+    }
+
+    .input {
+        height: 40px;
+    }
+
+    .thought {
+        font-size: 0.7rem;
+    }
+
+    .last {
+        font-size: 0.6rem;
+    }
+}

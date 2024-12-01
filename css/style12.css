@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 80vh;
+    padding-left: 20px;
+    font-family: sans-serif;
+    background-color: #000000;
+
+}
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 30px !important;
+    }
+}
+
+
+span {
+    color: brown;
+    margin-left: 10px;
+    min-width: 100px;
+    position: relative;
+}
+
+div{
+    display: inline-block;
+    width: 3px;
+    margin-top: 3px;
+    height: 55px;
+    background-color: brown;
+margin-left: 8px;
+}

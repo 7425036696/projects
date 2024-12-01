@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/index7.js" defer></script>
+</head>
+<body>
+    <input type="text" id="numbersOnly" placeholder="Phone Number" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+    <br>
+    <p>+(123) - 4567890</p>
+</body>
+<style>
+    body{
+        text-align: center;
+    }
+    input{
+        height: 20px;
+        width: 200px;
+        border: 0.1px solid black;
+        border-radius: 3px;
+        font-size: larger;
+        font-family: sans-serif;
+    }
+</style>
+</html>
